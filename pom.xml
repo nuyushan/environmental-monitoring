@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.briup.smart</groupId>
+	<artifactId>env-gather</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<env.gather.version>0.0.1-SNAPSHOT</env.gather.version>
+		<junit.version>4.13</junit.version>
+		<druid.version>1.1.23</druid.version>
+		<oralce.driver.version>8</oralce.driver.version>
+		<dom4j.version>2.1.3</dom4j.version>
+		<log4j.version>1.2.17</log4j.version>
+	</properties>
+	
+	<dependencyManagement>
+		
+		<dependencies>
+			
+			<dependency>
+				<groupId>com.briup.smart</groupId>
+			    <artifactId>env-gather-entity</artifactId>
+			    <version>${env.gather.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.briup.smart</groupId>
+			    <artifactId>env-gather-interface</artifactId>
+			    <version>${env.gather.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.alibaba</groupId>
+			    <artifactId>druid</artifactId>
+			    <version>${druid.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>com.oracle</groupId>
+			    <artifactId>ojdbc8</artifactId>
+			    <version>${oralce.driver.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>org.dom4j</groupId>
+			    <artifactId>dom4j</artifactId>
+			    <version>${dom4j.version}</version>
+			</dependency>
+			
+			<dependency>
+			    <groupId>log4j</groupId>
+			    <artifactId>log4j</artifactId>
+			    <version>${log4j.version}</version>
+			</dependency>
+			
+			
+		</dependencies>
+		
+	</dependencyManagement>
+	
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+	
+	<modules>
+		<module>env-gather-interface</module>
+		<module>env-gather-entity</module>
+		<module>env-gather-impl</module>
+	</modules>
+</project>
