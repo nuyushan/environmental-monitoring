@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.briup.smart</groupId>
+		<artifactId>env-gather</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>env-gather-impl</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.briup.smart</groupId>
+			<artifactId>env-gather-interface</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.2.11</version>
+		</dependency>
+      
+      <dependency>
+        <groupId>com.oracle.database.jdbc</groupId>
+        <artifactId>ojdbc8</artifactId>
+		  <version>21.5.0.0</version>
+	  </dependency>
+      
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+      </dependency>
+      
+      <dependency>
+        <groupId>org.dom4j</groupId>
+        <artifactId>dom4j</artifactId>
+      </dependency>
+	</dependencies>
+
+</project>
